@@ -9,4 +9,4 @@ jobs:
       - name: Deploy
         uses: rtCamp/action-deploy-wordpress@v3
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_ENTREPRISE_FRANCOIS }}
