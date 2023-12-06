@@ -1,5 +1,5 @@
 on: push
-name: Deploying Custom Theme
+name: Deploying Custom Theme via Git
 jobs:
   deploy:
     name: Deploy
