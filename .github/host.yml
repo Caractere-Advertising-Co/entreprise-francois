@@ -3,6 +3,6 @@ main:
   # SSH user to be used in deployment
   user: www-data
   # Server hostname or IP address for deployment
-  hostname: entreprisefrancois.caractere-advertising.be
+  hostname: eg9uc.ftp.infomaniak.com
   # Path to deploy.
   deploy_path: /sites/entreprisefrancois.caractere-advertising.be/wp-content/themes/entreprise-francois
