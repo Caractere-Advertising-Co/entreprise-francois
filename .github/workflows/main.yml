@@ -1,5 +1,5 @@
 on: push
-name: Deploying WordPress Site
+name: Deploying Custom Theme
 jobs:
   deploy:
     name: Deploy
