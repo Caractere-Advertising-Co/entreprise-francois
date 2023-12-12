@@ -1,0 +1,16 @@
+@keyframes slide-to-top{
+    from {
+      opacity: 0;
+      transform: translateY(0%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(100%);
+    }
+}
+
+
+.slide-from-bottom-to-top{
+    animation-duration: 2s;
+    animation-name: slide-to-top;
+}
