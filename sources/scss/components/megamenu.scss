@@ -1,0 +1,60 @@
+.megamenu{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: #fff;
+    z-index: 9;
+    transform: translateY(-100vw);
+    transition: transform ease-in 500ms;
+
+    .container{
+        margin-top: 30vh;
+        
+        .col-g{
+            width: 50%;
+
+            ul{
+                li{
+                    list-style: none;
+                    text-transform: uppercase;
+                    font-size: 3.5em;
+                    font-weight: 400;
+                    overflow: hidden;
+
+                    a{
+                        color:$primary-color;
+                        text-decoration: none;
+                        line-height: 1.5em;
+
+                        &:hover{
+                            color:$secondary-color;
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                .sub-menu{
+                    transform: translateX(-200px);
+                    height: 0;
+                    transform-origin: left;
+                    font-size: .5rem;
+                    transition: all ease-in 300ms;
+                }
+
+                .active{
+                    transform: translateX(50px);
+                    height: 100px;
+                }
+            }
+        }
+    }
+}
+
+.is_open{
+   transform:translateY(0);
+}
+
+.is_fixed{
+    position:fixed!important;
+    left: calc((100vw - 1040px)/2)
+}

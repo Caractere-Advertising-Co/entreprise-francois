@@ -1,12 +1,23 @@
 const galleryHome = document.getElementById('partenaires');
-const picofGallery = document.ge'
 
-const observer = new IntersectionObserver( entries => {
+const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5 // Déclencher l'animation lorsque 50% de la div est visible
+};
+
+const observer = new IntersectionObserver( function(entries, observer){
     entries.forEach(entry => {
         if(entry.isIntersecting){
-            entry.target.classList.add('slide-from-bottom-to-top');
+            const items = entry.target.querySelectorAll('.logo_partenaires');
+
+            items.forEach(item => {
+               item.classList.add('slide-from-bottom-to-top');
+            });
+            observer.unobserve(entry.target); // Arrête l'observation une fois que la div est visible
         }
-    })
-});
+    });
+}, options);
 
 observer.observe(galleryHome);
+

@@ -1,13 +1,17 @@
 /* Mixins */
-@import 'colors','megamenu','footer','animate';
-
+@import 'components/colors','components/megamenu','components/footer','components/animate', 'components/about','components/fonts';
 
 /* Start Styling */
 
 *{
     margin:0;
     padding:0;
-    font-family: 'Montserrat',sans-serif!important;
+
+}
+
+html,
+body{
+  font-family: 'Montserrat',sans-serif!important;
 
 }
 
@@ -24,11 +28,62 @@
   font-weight: 400;
   width: 150px;
   margin-top: 50px;
+  position: relative;
+  z-index: 8;
 
   &::before{
-    content:'→';
-    color:$primary-color;
-    margin-right: 20px;
+    content: "";
+    background-color: #002964;
+    color: #fff;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    margin-left:-30px;
+    display: block;
+    margin-top: -20px;
+    height: 52px;
+    width: 210px;
+    transition: transform ease-in 300ms;
+    z-index: 0;
+  }
+
+  &:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+    margin-left:-30px;
+    margin-top: -20px;
+    display: block; 
+  }
+
+  span{
+    
+    &::before{
+      content:'→';
+      color:$primary-color;
+      margin-right: 20px;
+    }
+  }
+
+  &:hover{
+    color:#fff;
+    border:1px solid $primary-color;
+    transition: all ease-in 500ms;
+  }
+
+}
+
+.cta-white{
+  border: 1px solid white;
+  color:white;
+
+  &::before{
+    background-color:white;
+  }
+  
+  span{
+    &::before{
+      color:white;
+    }
   }
 }
 
@@ -37,14 +92,15 @@
   background-color: #dfdfdf;
   border-radius: 5px;
   position: relative;
-  bottom: -28vh;
+  top: 77vh;
   left: calc(50vw - 3px);
   height: 20px;
+  z-index: 8;
 }
 
 .divider-top{
   position: relative;
-  top:-14vh;
+  top:-18vh;
   background-color: $secondary-color;
 }
 
@@ -76,6 +132,9 @@ body{
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
+      z-index: 10;
+      background-color: #fff;
 
       a{
         width: 250px;
@@ -88,6 +147,22 @@ body{
       #open_menu{
         display: flex;
         align-items: center;
+        width: 120px;
+
+        .labelToggle{
+          display: none;
+          margin:auto;
+        }
+
+        .active{
+          display: block;
+        }
+
+        svg{
+          border-left: 1px solid $primary-color;
+          margin-left: 20px;
+          padding-left: 20px;
+        }
 
         img{
           height: 30px;
@@ -102,9 +177,23 @@ body{
     #hero-section{
       width: 100vw;
       font-family: 'Montserrat',sans-serif;
-      padding-top: 20vh;
-      padding-bottom: 5vh;
+      height: calc(100vh - 150px);
+      padding: 0;
 
+      .swiper{
+        position: absolute;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        padding: 0;
+      }
+
+      .swiper-slide{
+        padding-top: 45vh;
+        padding-bottom: 5vh;
+        height:50vh;
+        
 
         h1{
           color:$primary-color;
@@ -125,6 +214,7 @@ body{
           letter-spacing: 1px;
           width: 33vw;
         }
+      }
       
         .swiper-pagination{
           position: absolute;
@@ -197,8 +287,8 @@ body{
         }
       }
 
-      .divider{
-        bottom: -25vh;
+      .divider-bottom{
+        top: 22vh;
       }
     }
 
@@ -230,27 +320,27 @@ body{
     }
 
     /*** Section Partenaires ****/
-    .gallery{
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      grid-column-gap: 50px;
-      grid-row-gap: 50px;
-      text-align: center;
-      justify-items: center;
-      align-items: center;
-      justify-content: center;
-    
-      img{
-        filter:grayscale(1);
-        max-width: 100px;
+      .gallery{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 50px;
+        grid-row-gap: 50px;
+        text-align: center;
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
       
-        &:hover{
-          filter:none;
-          transition: all ease-in-out 300ms;
+        img{
+          filter:grayscale(1);
+          max-width: 100px;
+        
+          &:hover{
+            filter:none;
+            transition: all ease-in-out 300ms;
+          }
         }
       }
-    }
 
     #references{
       text-align: center;
@@ -283,7 +373,8 @@ body{
             width: 30%;
             min-width: 30%;
             height: 250px;
-            border: 1px solid red;
+            background-size: cover!important;
+            background-position: center;
           }
   
           .descr_ref{

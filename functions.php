@@ -6,6 +6,9 @@ register_nav_menus( array(
 	  'footer' => 'Bas de page',
 ) );
 
+add_theme_support( 'post-thumbnails' ); 
+
+
 //SVG Files
 add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
     global $wp_version;
@@ -26,7 +29,7 @@ add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mime
     $mimes['svg'] = 'image/svg+xml';
     return $mimes;
   }
-  add_filter( 'upload_mimes', 'cc_mime_types' );
+
   
   function fix_svg() {
     echo '<style type="text/css">
@@ -36,11 +39,16 @@ add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mime
           }
           </style>';
   }
+  add_filter( 'upload_mimes', 'cc_mime_types' );
+
   add_action( 'admin_head', 'fix_svg' );
 
   // Create custom post (Chantiers)
 
-function entrepFrancois_register_post_type(){
+  
+
+
+  function entrepFrancois_register_post_type(){
   $labels = array(
     'name' => 'Chantiers',
     'all_items' => 'Tous les chantiers',  // affiché dans le sous menu
@@ -56,6 +64,8 @@ function entrepFrancois_register_post_type(){
     'thumbnail',
     'excerpt',
     'revisions',
+    'custom-fields',
+    'page-attributes',
   );
 
   $args = array(

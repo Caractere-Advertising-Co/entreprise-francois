@@ -6,15 +6,18 @@
 
             <?php if(have_rows('slide')):
                 while(have_rows('slide')): the_row();?>
-                    <?php $btn = get_sub_field('bouton');?>
+                    <?php 
+                        $btn = get_sub_field('bouton');
+                        $bgSlide = get_sub_field('background-slide');    
+                    ?>
 
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" <?php echo !empty($bgSlide) ? ' style="background:url(\''.$bgSlide['url'].'\') no-repeat;background-size:cover;"' : '';?>>
                         <div class="content">
                             <?php echo get_sub_field('titre');?>
                             <?php echo get_sub_field('baseline');?>
                             
                             <?php if($btn) : ?>
-                                <a class="cta hero-btn" href="<?php echo $btn['url'];?>"><?php echo $btn['title'];?></a>
+                                <a class="cta hero-btn" href="<?php echo $btn['url'];?>"><span><?php echo $btn['title'];?></span></a>
                             <?php endif;?>
                         </div>
                             </div>
@@ -38,40 +41,15 @@
         <div class="col-d">
             <?php $btn = get_field('liens_about');?>
             <?php the_field('description_presentation');?>
-            <a class="cta" href="<?php echo $btn['url'];?>" ;?> <?php echo $btn['title'];?></a>
+            <a class="cta" href="<?php echo $btn['url'];?>" ;?><span><?php echo $btn['title'];?></span></a>
         </div>
         
     </div>
 
-    <div class="divider"></div>
+    <div class="divider divider-bottom"></div>
 </section>
 
-<section id="partenaires">
-    <?php 
-    
-    $part_subtitle = get_field('sous-titre');
-    $part_descr = get_field('partenaire_description');
-    $logos_part = get_field('logo_partenaires');
-    
-    ?>
- 
-    <div class="container">
-        <div class="intro">
-            <?php echo $part_descr;?>
-        </div>    
-        <p class="subtitle">
-            <?php echo $part_subtitle;?>
-        </p>
-
-            <div class="gallery container">
-                <?php if($logos_part) :
-                    foreach($logos_part as $logo): 
-                        echo '<img src="'.$logo['url'].'" alt="'.$logo['title'].'" class="logo_partenaires" lazy/>';
-                    endforeach;
-                endif;?>
-            </div>
-    </div>
-</section>
+<?php get_template_part( 'template-parts/partenariats');?>
 
 <section id="references">
     <div class="container">
@@ -85,9 +63,9 @@
                     if(have_posts()):
                         while(have_posts()): the_post();?>
                         <tr>
-                            <td class="thumbnail"> <?php the_post_thumbnail();?></td>
+                            <td class="thumbnail" style="background:url('<?php echo get_the_post_thumbnail_url();?>');"></td>
                             <td class="descr_ref">
-                                <span class="date"> <?php the_date('d.m.Y');?></span>
+                                <span class="date"><?php echo get_the_date( 'd.m.Y' ); ?></span>
                                 <h3><?php the_title();?></h3>
                                 <?php the_content();?>
                                 <a href="">Lire plus...</a>
@@ -100,7 +78,7 @@
                 ?>
             </tbody>
         </table>
-        <a class="cta" href=""> voir plus </a>
+        <a class="cta" href=""><span>voir plus</span></a>
     </div>
 </section>
 
@@ -113,7 +91,7 @@
         <?php echo $contact_title;?>
         <?php echo $contact_txt;?>
 
-        <a class="cta" href=""> Contact</a>
+        <a class="cta" href="">Contact</a>
     </div>
 </section>
 

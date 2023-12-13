@@ -10,7 +10,11 @@
             </div>
             <div class="menu_footer">
                 <h4>L'entreprise</h4>
-                <?php wp_nav_menu('footer');?>
+                <?php wp_nav_menu(
+                    array(
+                        'menu-name' => 'footer',
+                        'theme_location' => 'footer'
+                    ));?>
             </div>
             <div class="col-contact">
                 <h4>Contact</h4>
