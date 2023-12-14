@@ -1,5 +1,5 @@
 /* Mixins */
-@import 'components/colors','components/megamenu','components/footer','components/animate', 'components/about','components/fonts','components/contact';
+@import 'components/colors','components/megamenu','components/footer','components/animate', 'components/about','components/fonts','components/contact','components/references';
 
 /* Start Styling */
 
@@ -107,7 +107,7 @@ body{
 body{
     p{
       font-family: 'Montserrat',sans-serif!important;
-      font-weight: 200;
+      font-weight: 400;
     }
 
     h2,
@@ -123,7 +123,7 @@ body{
     }
 
     section{
-      height:55vh;
+      min-height:55vh;
       padding: 15vh 0 30vh 0;
     }
 
@@ -374,6 +374,7 @@ body{
 
     #references{
       text-align: center;
+      padding-bottom: 5vh;
 
       .container{
         padding-bottom: 100px;
@@ -454,8 +455,8 @@ body{
     }
 
     #contact-us{
-      height: 250px;
-      padding: 15vh 0;
+      min-height: 35vh;
+      padding: 5vh 0;
       text-align: center;
 
       .container{

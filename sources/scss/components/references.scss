@@ -1,0 +1,123 @@
+.section-galerie{
+    margin-bottom: 200px!important;
+
+    .section_filter{
+        margin:30px auto;
+        display: flex;
+        gap: 50px;
+
+        .filter{
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: .8em;
+            color:$primary-color;
+            
+
+            &::before{
+                content:'';
+                width: 50px;
+                transform: scaleX(0);
+                position: absolute;
+                transform-origin: left;
+                border-bottom: 1px solid $secondary-color;
+                height: 30px;
+                transition: all ease-in 300ms;
+            }
+        
+            &:hover,
+            &:checked{
+                color:$secondary-color;
+                font-weight: 600;
+        
+                &::before{
+                    transform: scaleX(1);
+                }
+            }
+        }
+
+        .active{
+            color:$secondary-color;
+                font-weight: 600;
+        
+                &::before{
+                    transform: scaleX(1);
+                }
+        }
+    }
+
+    .grid-chantier{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        margin-bottom: 80px;
+
+        a{
+            background-size: cover!important;
+            background-position: center center!important;
+            .thumbnail{
+                width: 100%;
+                min-height: 200px;
+                transition: all ease-in-out 200ms;
+                background-size:cover;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                h3{
+                    opacity: 0;
+                    transition: all ease-in-out 300ms;
+                    font-size: .7em;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    color:#fff;
+                    letter-spacing: 1px;
+                }
+            }
+
+            &:hover{
+
+                .thumbnail{
+                    backdrop-filter: brightness(60%);
+                }
+                h3{
+                    opacity: 1;
+                }
+            }
+
+        }
+
+        
+    }
+
+    .cta{
+        text-align: center;
+        margin: auto;
+    }
+}
+
+#section-presa{
+    border-top: 1px  solid #eee;
+    padding: 10vh 0;
+
+    h2{
+        color:$primary-color;
+
+        strong{
+            color:$secondary-color;
+        }
+    }
+
+    .col_intro{
+        color:$primary-color;
+        width: 60%;
+        text-align: justify;
+        margin:100px;
+        margin-left:40%;
+
+    }
+}
+
+section{
+    padding-bottom: 10vh!important;
+}

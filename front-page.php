@@ -59,7 +59,10 @@
 
         <table>
             <tbody>
-                <?php query_posts( array('post_type' => 'chantiers'));
+                <?php query_posts( array(
+                    'post_type' => 'chantiers',
+                    'posts_per_page' => '3',
+                ));
                     if(have_posts()):
                         while(have_posts()): the_post();?>
                         <tr>
@@ -82,6 +85,6 @@
     </div>
 </section>
 
-<?php get_template
+<?php get_template_part('template-parts/section-contact');?>
 
 <?php get_footer();?>
