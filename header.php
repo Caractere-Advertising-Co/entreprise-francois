@@ -18,31 +18,67 @@
         <?php 
             $base_url = get_template_directory_uri();
             $logo = get_field('logo','options');
+            $logo_white = get_field('logo-white','options');
+            $style = get_field('header__dark_theme');
         ?>
 
         <?php get_template_part('template-parts/megamenu');?>
 
-        <div id="header" class="container">
-            <a href="<?php echo get_bloginfo( 'url' );?>">
-                <img class="logo" src="<?php echo  $logo['url'];?>" alt="<?php echo $logo['alt'];?>"/>
-            </a>
+        <?php if($style) : ?>
+            <div id="header" class="dark-theme">
+                <div class="container">
+                    <a class="logo-white" href="<?php echo get_bloginfo( 'url' );?>">
+                        <img class="logo" src="<?php echo  $logo_white['url'];?>" alt="<?php echo $logo_white['alt'];?>"/>
+                    </a>
+                    
+                    <a href="<?php echo get_bloginfo( 'url' );?>">
+                        <img class="logo" src="<?php echo  $logo['url'];?>" alt="<?php echo $logo['alt'];?>"/>
+                    </a>
 
-            <div id="open_menu">
-                <p class="labelToggle active">Menu</p>
-                <p class="labelToggle">Fermer</p>
-                <svg id="open_the_Mmenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#022964" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
-                    <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
-                        <animate dur="0.2s" attributeName="d" values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze" begin="start.begin" />
-                        <animate dur="0.2s" attributeName="d" values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze" begin="reverse.begin" />
-                    </path>
-                    <rect width="10" height="10" stroke="none">
-                        <animate dur="2s" id="reverse" attributeName="width" begin="click" />
-                    </rect>
-                    <rect width="10" height="10" stroke="none">
-                        <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze" begin="click" />
-                        <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
-                    </rect>
-                </svg>
+                    <div id="open_menu">
+                        <p class="labelToggle active">Menu</p>
+                        <p class="labelToggle">Fermer</p>
+                        <svg id="open_the_Mmenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#fff" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
+                            <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+                                <animate dur="0.2s" attributeName="d" values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze" begin="start.begin" />
+                                <animate dur="0.2s" attributeName="d" values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze" begin="reverse.begin" />
+                            </path>
+                            <rect width="10" height="10" stroke="none">
+                                <animate dur="2s" id="reverse" attributeName="width" begin="click" />
+                            </rect>
+                            <rect width="10" height="10" stroke="none">
+                                <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze" begin="click" />
+                                <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
+                            </rect>
+                        </svg>
+                    </div>
+                </div>
             </div>
-        </div>
+        <?php else : ?>
+            <div id="header">
+                <div class="container">
+                    <a href="<?php echo get_bloginfo( 'url' );?>">
+                        <img class="logo" src="<?php echo  $logo['url'];?>" alt="<?php echo $logo['alt'];?>"/>
+                    </a>
+
+                    <div id="open_menu">
+                        <p class="labelToggle active">Menu</p>
+                        <p class="labelToggle">Fermer</p>
+                        <svg id="open_the_Mmenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#022964" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
+                            <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+                                <animate dur="0.2s" attributeName="d" values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze" begin="start.begin" />
+                                <animate dur="0.2s" attributeName="d" values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze" begin="reverse.begin" />
+                            </path>
+                            <rect width="10" height="10" stroke="none">
+                                <animate dur="2s" id="reverse" attributeName="width" begin="click" />
+                            </rect>
+                            <rect width="10" height="10" stroke="none">
+                                <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze" begin="click" />
+                                <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
+                            </rect>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        <?php endif;?>
 

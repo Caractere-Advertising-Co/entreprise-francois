@@ -1,20 +1,29 @@
 document.addEventListener('DOMContentLoaded', function() {
     const openMenu = document.querySelector('#open_the_Mmenu');
     const megaMenu = document.querySelector('#megamenu');
-    const header = document.querySelector('#header');
 
+    const logoWhite = document.querySelector('.logo-white');
+
+    const header = document.querySelector('#header.dark-theme');
     const labelToggle = document.querySelectorAll('.labelToggle');
 
     openMenu.addEventListener('click', function(e){
         megaMenu.classList.toggle('is_open');
-        header.classList.toggle('is_fixed');
+
+        if(header){
+            header.classList.toggle('is_fixed');
+            header.classList.toggle('dark-theme');  
+        }
+        
+        if(logoWhite){
+            logoWhite.classList.toggle('hide');
+        }
+
 
         labelToggle.forEach(element => {
             element.classList.toggle('active');
         });
-    })
-    
-    
+    })    
     
     // Affichage élément submenu
     function openSubMenu() {
@@ -30,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-
     function closeSubMenu() {
         const subMenus = document.querySelectorAll('.sub-menu');
         subMenus.forEach(function(menu) {

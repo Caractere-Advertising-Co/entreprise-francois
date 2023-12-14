@@ -3,12 +3,18 @@
     height: 100vh;
     position: fixed;
     background: #fff;
+    opacity: 0;
     z-index: 9;
-    transform: translateY(-100vw);
-    transition: transform ease-in 500ms;
+    top:-100vh;
+    transform: translateY(-100vh);
+    transition: transform ease-in 300ms;
+    overflow-x: hidden;
 
     .container{
-        margin-top: 30vh;
+        height: 90vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
         
         .col-g{
             width: 50%;
@@ -17,7 +23,7 @@
                 li{
                     list-style: none;
                     text-transform: uppercase;
-                    font-size: 3.5em;
+                    font-size: 3em;
                     font-weight: 400;
                     overflow: hidden;
 
@@ -47,14 +53,71 @@
                 }
             }
         }
+
+        .col-d{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            a{ 
+                color:$secondary-color;
+                img{
+                    max-width: 20px;
+                }
+
+            }
+
+            .tel_Mmenu{
+                color:$primary-color;
+                text-decoration: none;
+            }
+
+            .line_rs{
+                margin-top: 40px;
+
+                a{
+                    border: 1px solid #ccc;
+                    content: '\f39e';
+                    font-family: 'Font Awesome';
+                    border-radius: 15px;
+                    aspect-ratio: 1;
+                    height: 30px;
+                    display: inline-block;
+                    text-align: center;
+                    line-height: 2.4em;
+                    overflow: hidden;
+                    transition: all ease-in-out 300ms;
+
+                    img{
+                        aspect-ratio: 1;
+                        filter: brightness(0);
+                    }
+
+                    &:hover{
+                        background-color: $primary-color;
+                        
+
+                        img{
+                            filter: brightness(1);
+                        }
+                    }
+                }
+                
+            }
+
+            a + a{
+                margin-left:30px;
+            }
+        }
     }
 }
 
 .is_open{
    transform:translateY(0);
+   opacity: 1;
+   top:0;
 }
 
 .is_fixed{
     position:fixed!important;
-    left: calc((100vw - 1040px)/2)
 }
