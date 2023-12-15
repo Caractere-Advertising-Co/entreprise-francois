@@ -42,9 +42,7 @@ $bouton = get_field('bouton');
 
                 if ($chantiers->have_posts()):
                     while ($chantiers->have_posts()): $chantiers->the_post(); ?>
-                
                         <?php get_template_part('template-parts/card-chantier');?>
-
                     <?php endwhile;
                 endif;
                 
