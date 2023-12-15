@@ -12,6 +12,8 @@ $bouton = get_field('bouton');
 
 ?>
 
+<?php get_template_part( 'template-parts/popup-reference' );?>
+
 <section id="page-reference">
     <div class="container section-galerie">
         <div class="section_filter">
@@ -31,30 +33,26 @@ $bouton = get_field('bouton');
 
         <div class="grid-chantier">
             <?php 
-                query_posts(array('post_type' => 'chantiers'));    
-                if (have_posts()):
-                    while (have_posts()): the_post(); ?>
-                    <?php $taxs = get_the_terms(get_the_id(),'type-chantier');
-                    
-                        foreach($taxs as $tax):
-                            $value = $tax->name;
-                        endforeach;?>
+                $chantiers = new WP_Query(array(
+                    'post_type' => 'chantiers',
+                    'posts_per_page' => 9,
+                    'orderby' => 'date',
+                    'paged' => 1,
+                ));
 
-                        <a data-fslightbox data-filters="<?php echo $value;?>" href="<?php echo get_the_post_thumbnail_url();?>" style="background:url('<?php echo get_the_post_thumbnail_url();?>');" <?php post_class(); ?>>
-                            <article class="thumbnail">
-                                <h3><?php the_title();?></h3>
-                            </article>
-                        </a>
-
+                if ($chantiers->have_posts()):
+                    while ($chantiers->have_posts()): $chantiers->the_post(); ?>
+                
+                        <?php get_template_part('template-parts/card-chantier');?>
 
                     <?php endwhile;
                 endif;
                 
-                wp_reset_query();
+                wp_reset_postdata();
             ?>
         </div>
 
-        <a href="" class="cta"><span>Voir plus</span></a>
+        <a href="#!" class="cta" id="load-more"><span>Voir plus</span></a>
 
     </div>
 

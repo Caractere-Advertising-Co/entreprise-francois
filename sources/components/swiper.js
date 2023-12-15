@@ -27,4 +27,4 @@ const swiper_adv = new Swiper('.swiper-avantages', {
     nextEl: '.swiper-button-next-2',
     prevEl: '.swiper-button-prev-2',
   },
-})
+});
