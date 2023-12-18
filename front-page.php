@@ -1,5 +1,7 @@
 <?php get_header();?>
 
+<?php get_template_part( 'template-parts/popup-reference' );?>
+
 <section id="hero-section">
     <div class="swiper">
         <div class="swiper-wrapper">
@@ -65,15 +67,15 @@
                 ));
                     if(have_posts()):
                         while(have_posts()): the_post();?>
-                        <tr>
+                        <tr class="see-details-fp" style="cursor:pointer;" data-index="<?php echo get_the_id();?>" >
                             <td class="thumbnail" style="background:url('<?php echo get_the_post_thumbnail_url();?>');"></td>
                             <td class="descr_ref">
                                 <span class="date"><?php echo get_the_date( 'd.m.Y' ); ?></span>
                                 <h3><?php the_title();?></h3>
                                 <?php the_content();?>
-                                <a href="">Lire plus...</a>
+                                <a href="#!">Lire plus...</a>
                             </td>
-                        </tr>
+                        </tr>                
                         <?php endwhile;
                     endif;
 

@@ -79,7 +79,7 @@ $galerie = get_field('galerie');
             <?php 
                 if(have_rows('services')):
                     while(have_rows('services')): the_row(); ?>
-                        <div>
+                        <div id="<?php echo get_sub_field('nom_service');?>"    >
                             <button class="accordion"><?php echo get_sub_field('nom_service');?></button>
                             <div class="content_toggle">
                                 <?php echo get_sub_field('explications-service');?>

@@ -1,0 +1,126 @@
+@media screen and (max-width:640px) {
+    // Header
+body{
+    .container{
+        width: 90vw!important;
+    }
+
+    #megamenu{
+        .container{
+            flex-direction: column;
+            align-items: flex-start;
+            padding-top: 25vh;
+            height: 75vh;
+
+            
+            .col-g{
+                width: 100%;
+                li{
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+
+    #header{
+        padding: 4vh 0!important;
+
+        .container{
+            .logo{
+                max-width: 150px!important;
+            }
+            
+            #open_menu{
+                width:auto;
+
+                .labelToggle,
+                .active{
+                    display: none!important;
+                }
+
+                svg{
+                    margin-left: 10px;
+                    width: 40px;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+
+    #about-lef{
+        .title_content{
+            h1,
+            h2{
+                font-size: 1.5em!important;
+            }
+        }
+
+        .col_intro{
+            width: 100%!important;
+        }
+    }
+
+    #col_services{
+        width: 100%!important;
+    }
+
+    // About Us
+
+    .container .gallery{
+        grid-template-columns: repeat(3, 1fr)!important;
+        column-gap: 30px;
+        row-gap: 30px;
+
+        img{
+            max-width: 70px;
+        }
+    }
+
+    //Contact-us
+
+    #contact-us{
+        .container{
+            p{
+                max-width: 100%;
+            }
+        }
+    }
+
+    //footer
+
+    footer{
+        .container{
+            .footer-top{
+                flex-wrap: wrap;
+                flex-direction: row;
+
+                .logo-footer{
+                    width: 100%;
+                    text-align: center;
+    
+                    img{
+                        width: 40%;
+                        margin-bottom: 30px;
+                    }
+                }
+
+            }
+            
+
+            .footer-top{
+                .menu-footer{
+                    width: 30%;
+                    padding: 0px 5% 0px 0px;
+                }
+
+                .col-contact{
+                    width: 50%;
+                    padding: 0px 0px 0px 9%;
+                }
+            }
+        }
+
+    }
+}
+    
+}

@@ -1,9 +1,12 @@
 $(document).ready(function() {
-    $('.type-chantiers').on('click', function(e) {
+    $('.type-chantiers').on('click', show_ref_popup);
+    $('.see-details-fp').on('click', show_ref_popup);
+
+    function show_ref_popup(e) {
         e.preventDefault();
         var ref = $(this).data('index');
 
-        $('#popup_reference').css('display','flex'),
+        $('#popup_reference').css('display','flex');
 
         $.ajax({
             type: 'POST',
@@ -17,7 +20,7 @@ $(document).ready(function() {
                 if (res.template_content && res.template_content.trim() !== '') {
                     $('.container_popup').empty().append(res.template_content);
 
-                    const swiper_thumbs = new Swiper('.swiper-thumbs',{
+                    const swiper_thumbs = new Swiper('.swiper-thumbs', {
                         spaceBetween: 10,
                         slidesPerView: 4,
                         freeMode: true,
@@ -27,31 +30,27 @@ $(document).ready(function() {
                     // Initialisation du Swiper une fois que le contenu est ajouté
                     const swiper_ref = new Swiper('.swiper-reference', {
                         spaceBetween: 10,
-                            
                         cssMode: true,
                         navigation: {
                             nextEl: ".swiper-button-next",
                             prevEl: ".swiper-button-prev",
                         },
-                        thumbs:{
+                        thumbs: {
                             swiper: swiper_thumbs,
                         },
                     });
-                    
                 } else {
                     console.log('La réponse est vide ou nulle.');
                 }
             }
         });
-    });
+    }
 
     $(document).on('click', function(event) {
-        if (!$(event.target).closest('.container_popup, .type-chantiers').length) {
+        if (!$(event.target).closest('.container_popup, .type-chantiers, .see-details-fp').length){
             $('.container_popup').empty();
             $('#popup_reference').hide();
         }
     });
+
 });
-
-
-

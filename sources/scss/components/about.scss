@@ -173,17 +173,24 @@ h4{
 
     .swiper-avantages{
         margin-top: 80px;
-        max-width: 80vw;
+        width: 70vw;
+        overflow: visible;
         
         .swiper-wrapper{
             margin:auto;
+            min-height: 300px;
+            overflow: hidden;
 
             .swiper-slide{
                 min-height: 250px;
                 max-height: 250px;
-                border-bottom: 2px solid $secondary-color;
                 box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.2);
+
+                border-bottom: 2px solid $primary-color;
                 overflow: hidden;
+                transition: all ease-in-out 300ms;
+                overflow-y: scroll;
+
 
                 .content{
                     padding: 15% 10%;
@@ -206,6 +213,9 @@ h4{
     
                         h4{
                             font-weight: 400;
+                            text-align: left;
+                            color:#fff;
+                            font-size: 1.1em;
                         }
                     }
     
@@ -215,25 +225,36 @@ h4{
                         transition: all ease-in 400ms;
                         font-size: .8em;
                         text-align: justify;
+                        position: absolute;
+                        top:5%;
+                        left:5%;
+                        width: 90%;
                     }
                 }
 
-            &:hover{
-                background-color: $primary-color-hover;
-                .adv_title{
-                    transform: translateY(-100px);
-                    opacity: 0;
-                }
+                &:hover{
+                    background-color: $primary-color-hover;
+                    border-bottom: 3px solid $secondary-color;
 
-                .adv_descr{
-                    opacity: 1;
-                    transform: translateY(-90px);
-                }
+                    .adv_title{
+                        transform: translateY(-100px);
+                        opacity: 0;
+                    }
+
+                    .adv_descr{
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }                
             }
-                
-            
-                
-            }
+        }
+
+        .swiper-button-next-2{
+            right: -60px;
+        }
+
+        .swiper-button-prev-2{
+            left: -60px;
         }
 
         .swiper-button-prev-2,
@@ -243,6 +264,7 @@ h4{
             height: 50px;
             width: 50px;
             padding: 0;
+            top: calc(50% - 25px);
 
             &::after{
                 font-size: 1.2em;
