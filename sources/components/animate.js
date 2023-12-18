@@ -1,6 +1,6 @@
 const page = document.getElementById('content-page-contact');
 
-if (page) {
+if (!page) {
     const galleryHome = document.getElementById('partenaires');
 
     const options = {
