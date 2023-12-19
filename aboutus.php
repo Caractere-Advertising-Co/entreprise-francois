@@ -79,7 +79,12 @@ $galerie = get_field('galerie');
             <?php 
                 if(have_rows('services')):
                     while(have_rows('services')): the_row(); ?>
-                        <div id="<?php echo get_sub_field('nom_service');?>"    >
+                    <?php
+                        $carspec = array('é','è','à','ç');
+                        $ref =  substr(strtolower(get_sub_field('nom_service')),0,5);
+                        $id = str_replace($carspec,'e',$ref).'_id';
+                    ?>
+                        <div id="<?php echo $id;?>">
                             <button class="accordion"><?php echo get_sub_field('nom_service');?></button>
                             <div class="content_toggle">
                                 <?php echo get_sub_field('explications-service');?>
