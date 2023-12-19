@@ -124,7 +124,7 @@ $galerie = get_field('galerie');
             <div class="swiper-button-next swiper-button-next-2"></div>
         </div>
 
-        <a class="cta cta-white"    href="<?php echo $btnAdv['url'];?>"><span><?php echo $btnAdv['title'];?></span></a>
+        <a class="cta cta-white" href="<?php echo $btnAdv['url'];?>"><span><?php echo $btnAdv['title'];?></span></a>
     </div>
 </section>
 <section id="contact">

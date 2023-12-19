@@ -44,12 +44,13 @@
                     height: 0;
                     transform-origin: left;
                     font-size: .5rem;
-                    transition: all ease-in 300ms;
+                    transition: height ease-in 300ms;
+                    transition: transform ease-in 500ms;
                 }
 
                 .active{
                     transform: translateX(50px);
-                    height: 100px;
+                    height: 220px;
                 }
             }
         }

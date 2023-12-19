@@ -64,7 +64,7 @@ $bouton = get_field('bouton');
         <div class="col_intro">
             <?php echo $descr;?>
 
-            <a href="<?php echo $bouton['url'];?>" class="cta"><span><?php echo $bouton['url'];?></span></a>
+            <a href="<?php echo $bouton['url'];?>" class="cta"><span><?php echo $bouton['title'];?></span></a>
         </div>
     </div>
 </section>
