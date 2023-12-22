@@ -71,8 +71,12 @@ h4{
         padding: 0;
         text-align: center;
 
-        .swiper-slide img{
-            max-width: 80%;
+        .swiper-slide{
+            img{
+                max-width: 80%!important;
+                margin:auto;
+            }
+        
         }
 
         .swiper-button-prev,
