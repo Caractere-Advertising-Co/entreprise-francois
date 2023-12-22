@@ -51,7 +51,6 @@ $bouton = get_field('bouton');
         </div>
 
         <a href="#!" class="cta" id="load-more"><span>Voir plus</span></a>
-
     </div>
 
     <?php get_template_part('template-parts/section-contact');?>

@@ -66,8 +66,14 @@ h4{
     .swiper{
         margin-top: -70px;
         width: 100%!important;
+        max-height: 400px;
+        overflow: hidden;
         padding: 0;
         text-align: center;
+
+        .swiper-slide img{
+            max-width: 80%;
+        }
 
         .swiper-button-prev,
         .swiper-button-next{
