@@ -93,11 +93,12 @@ $galerie = get_field('galerie');
                     <?php endwhile;
                 endif;
             ?>
+            <?php if($btn_service) : ?>
+                <a class="cta from-bottom" href="<?php echo $btn_service['url'];?>"><span><?php echo $btn_service['title'];?></span></a>
+            <?php endif;?>
         </div>
 
-        <?php if($btn_service) : ?>
-            <a class="cta from-bottom" href="<?php echo $btn_service['url'];?>"><span><?php echo $btn_service['title'];?></span></a>
-        <?php endif;?>
+        
     </div>
 </section>
 

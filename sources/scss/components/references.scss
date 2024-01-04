@@ -135,11 +135,10 @@
 
     .col_intro{
         color:$primary-color;
-        width: 60%;
         text-align: justify;
-        margin:100px;
-        margin-left:40%;
-
+        margin: 100px auto 0 auto;
+        margin-left: 40%;
+        padding-right: calc(10% + 24px);
     }
 }
 

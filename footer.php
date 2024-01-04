@@ -1,4 +1,4 @@
-<footer class="from-bottom">
+<footer>
     <div class="container">
         <div class="footer-top">
             <div class="logo-footer from-left">

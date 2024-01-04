@@ -21,7 +21,6 @@ body{
     }
 
     #header{
-      height: 50px;
       width:100vw;
       padding:50px 0;
       position: relative;
@@ -33,10 +32,10 @@ body{
         align-items: center;
 
         a{
-          width: 250px;
+          width: 300px;
   
           .logo{
-            max-width: 250px;
+            max-width: 300px;
           }
         }
 
