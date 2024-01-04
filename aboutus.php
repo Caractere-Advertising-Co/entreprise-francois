@@ -49,7 +49,7 @@ $galerie = get_field('galerie');
 <section id="services">
     <div class="container">
         <div class="swiper">
-            <div class="swiper-wrapper" style="overflow:hidden;height:300px;">
+            <div class="swiper-wrapper" style="overflow:hidden;">
                 <?php 
                     foreach($galerie as $img):?>
                         <div class="swiper-slide" <?php echo !empty($bgSlide) ? ' style="background:url(\''.$bgSlide['url'].'\') no-repeat;background-size:cover;"' : '';?>>

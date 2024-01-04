@@ -8,17 +8,17 @@
     ?>
  
     <div class="container">
-        <div class="intro">
+        <div class="intro from-bottom">
             <?php echo $part_descr;?>
         </div>    
-        <p class="subtitle">
+        <p class="subtitle from-top">
             <?php echo $part_subtitle;?>
         </p>
 
             <div class="gallery container">
                 <?php if($logos_part) :
                     foreach($logos_part as $logo): 
-                        echo '<img src="'.$logo['url'].'" alt="'.$logo['title'].'" class="logo_partenaires" lazy/>';
+                        echo '<img src="'.$logo['url'].'" alt="'.$logo['title'].'" class="logo_partenaires from-bottom" lazy/>';
                     endforeach;
                 endif;?>
             </div>

@@ -16,19 +16,22 @@ $bouton = get_field('bouton');
 
 <section id="page-reference">
     <div class="container section-galerie">
-        <div class="section_filter">
-            <?php 
-                $terms = get_terms('type-chantier', array(
-                    'orderby' => 'name',
-                    'order' => 'asc',
-                    'hide-empty' => false,
-                ));
+        <div class="section_titre">
+            <?php echo get_field('titre');?>
+            <div class="section_filter">
+                <?php 
+                    $terms = get_terms('type-chantier', array(
+                        'orderby' => 'name',
+                        'order' => 'asc',
+                        'hide-empty' => false,
+                    ));
 
-                foreach ($terms as $term) :
-                    echo '<div class="filter" data-filter="'. $term->name .'">'. $term->name .'</div>';
-                endforeach; 
-                    echo '<div class="filter" data-filter="all"> Voir tout</div>';
-            ?>
+                    foreach ($terms as $term) :
+                        echo '<div class="filter" data-filter="'. $term->name .'">'. $term->name .'</div>';
+                    endforeach; 
+                        echo '<div class="filter" data-filter="all"> Voir tout</div>';
+                ?>
+            </div>
         </div>
 
         <div class="grid-chantier">
@@ -39,7 +42,7 @@ $bouton = get_field('bouton');
                     'orderby' => 'date',
                     'paged' => 1,
                 ));
-
+                
                 if ($chantiers->have_posts()):
                     while ($chantiers->have_posts()): $chantiers->the_post(); ?>
                         <?php get_template_part('template-parts/card-chantier');?>

@@ -114,10 +114,10 @@ body{
 
 .divider{
   width: 3px;
-  background-color: #dfdfdf;
+  background-color: #ffffff;
   border-radius: 5px;
   position: relative;
-  top: 77vh;
+  top: 60vh;
   left: calc(50vw - 3px);
   height: 20px;
   z-index: 8;
@@ -127,4 +127,13 @@ body{
   position: relative;
   top:-18vh;
   background-color: $secondary-color;
+}
+
+h2,
+h3{
+  font-size: 2.5rem;
+}
+
+p{
+  font-size: 1rem;
 }

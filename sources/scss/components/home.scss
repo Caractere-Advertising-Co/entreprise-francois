@@ -11,8 +11,7 @@ body{
 
     .container,
     .content{
-      width: 70vw;
-      max-width: 1040px;
+      width: 90vw;
       margin:auto;
     }
 
@@ -24,7 +23,6 @@ body{
     #header{
       height: 50px;
       width:100vw;
-      background-color: #fff;
       padding:50px 0;
       position: relative;
       z-index: 10;
@@ -45,11 +43,15 @@ body{
         #open_menu{
           display: flex;
           align-items: center;
-          width: 120px;
+          min-width: 140px;
+          max-width: 150px;
   
           .labelToggle{
             display: none;
             margin:auto;
+            color:$primary-color;
+            font-weight: 500;
+            text-transform: uppercase;
           }
   
           .active{
@@ -57,7 +59,7 @@ body{
           }
   
           svg{
-            border-left: 1px solid $primary-color;
+            border-left: 1px solid $secondary-color;
             margin-left: 20px;
             padding-left: 20px;
           }
@@ -101,8 +103,8 @@ body{
     #hero-section{
       width: 100vw;
       font-family: 'Montserrat',sans-serif;
-      height: calc(100vh - 150px);
-      padding: 0;
+      // height: calc(100vh - 150px);
+      // padding: 0;
 
       .swiper{
         position: absolute;
@@ -117,6 +119,7 @@ body{
         padding-top: 45vh;
         padding-bottom: 5vh;
         height:50vh;
+        padding-left: 10vw;
         
 
         h1{
@@ -132,7 +135,7 @@ body{
   
         p{
           color:$secondary-color;
-          font-size: .7em;
+          font-size: 1em;
           text-transform: uppercase;
           font-weight: 400;
           letter-spacing: 1px;
@@ -145,8 +148,7 @@ body{
           top:-10vh;
           right: 0!important;
           gap: 10px;
-          width: 70vw;
-          max-width: 1040px;
+          width: 90vw;
           margin:auto;
           height: 50px !important;
           display: flex !important;
@@ -179,28 +181,28 @@ body{
 
       .container{
         display:flex;
+        flex-direction: column;
 
         .col-g{
-          width:30%;
+          width:50%;
+          padding-left: 10vw;
 
           h2{
             color:$primary-color;
             font-weight: 400;
-            font-size: 1.5em;
           }
 
           h3{
             font-weight: 400;
             color:$secondary-color;
-            font-size: 1.5em;
           }
 
         }
 
         .col-d{
-          padding-top:20vh;
-          width:70%;
-          font-size: .9em;
+          padding-top: 10vh;
+          padding-left: 30%;
+          width:50%;
 
           p{
             margin-bottom: 20px;
@@ -224,7 +226,6 @@ body{
         letter-spacing: 10px;
         
         p{
-          font-size: 1.2em;
           color:#222;
           font-weight: 400;
           text-align: center;
@@ -288,6 +289,7 @@ body{
       }
 
       table{
+        width: 80%;
         margin:100px auto;
         border-collapse: collapse;
         
@@ -317,7 +319,6 @@ body{
   
             h3{
               color:$primary-color;
-              font-size: 1.5em;
               font-weight: 700;
               margin: 10px auto 20px;
               text-align: left;
@@ -359,17 +360,14 @@ body{
         h2{
           font-weight: 400;
           color:$primary-color;
-          font-size: 2em;
         }
   
         h3{
-          font-size: 2em;
           color:$secondary-color;
           font-weight: 600;
         }
   
         p{
-          font-size: .8em;
           max-width: 50vw;
           margin: 30px auto;
           line-height: 1.5em;

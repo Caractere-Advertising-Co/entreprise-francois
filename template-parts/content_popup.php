@@ -1,4 +1,3 @@
-
 <div class="popup-content">
     <div class="col_g">
         <h2><?php echo $post_data['title']; ?></h2>
@@ -15,4 +14,5 @@
             <?php endif;?>
         </div>
     </div>
+    <p>X</p>
 </div>

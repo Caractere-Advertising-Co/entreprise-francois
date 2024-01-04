@@ -29,8 +29,9 @@ $(document).ready(function() {
 
                     // Initialisation du Swiper une fois que le contenu est ajouté
                     const swiper_ref = new Swiper('.swiper-reference', {
-                        spaceBetween: 10,
                         cssMode: true,
+                        autoplay:true,
+                        loop:true,
                         navigation: {
                             nextEl: ".swiper-button-next",
                             prevEl: ".swiper-button-prev",

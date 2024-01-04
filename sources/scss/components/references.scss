@@ -1,49 +1,62 @@
 .section-galerie{
     margin-bottom: 200px!important;
 
-    .section_filter{
-        margin:30px auto;
-        display: flex;
-        gap: 50px;
+    .section_titre{
+        padding-left: 5vw;
 
-        .filter{
+        h1{
+            font-size: 2.5rem;
+            font-weight: 200;
+            color: $primary-color;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: .8em;
-            color:$primary-color;
-            
-
-            &::before{
-                content:'';
-                width: 50px;
-                transform: scaleX(0);
-                position: absolute;
-                transform-origin: left;
-                border-bottom: 1px solid $secondary-color;
-                height: 30px;
-                transition: all ease-in 300ms;
-            }
-        
-            &:hover,
-            &:checked{
-                color:$secondary-color;
-                font-weight: 600;
-        
-                &::before{
-                    transform: scaleX(1);
-                }
-            }
         }
-
-        .active{
-            color:$secondary-color;
-                font-weight: 600;
         
+        .section_filter{
+            margin:30px auto 100px auto;
+            display: flex;
+            gap: 50px;
+    
+            .filter{
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                font-size: .8em;
+                color:$primary-color;
+                
+    
                 &::before{
-                    transform: scaleX(1);
+                    content:'';
+                    width: 50px;
+                    transform: scaleX(0);
+                    position: absolute;
+                    transform-origin: left;
+                    border-bottom: 1px solid $secondary-color;
+                    height: 30px;
+                    transition: all ease-in 300ms;
                 }
+            
+                &:hover,
+                &:checked{
+                    color:$secondary-color;
+                    font-weight: 600;
+            
+                    &::before{
+                        transform: scaleX(1);
+                    }
+                }
+            }
+    
+            .active{
+                color:$secondary-color;
+                    font-weight: 600;
+            
+                    &::before{
+                        transform: scaleX(1);
+                    }
+            }
         }
     }
+
+    
 
     .grid-chantier{
         display: grid;
@@ -51,14 +64,18 @@
         grid-column-gap: 20px;
         grid-row-gap: 20px;
         margin-bottom: 80px;
+        position: relative;
+        width: 95vw;
+        left: -7.5vw;
 
         a{
             background-size: cover!important;
             background-position: center center!important;
             text-decoration: none;
+
             .thumbnail{
                 width: 100%;
-                min-height: 200px;
+                min-height: 350px;
                 transition: all ease-in-out 200ms;
                 background-size:cover;
                 display: flex;

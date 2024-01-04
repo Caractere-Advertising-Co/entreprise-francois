@@ -1,28 +1,46 @@
-const page = document.getElementById('content-page-contact');
+import inView from 'in-view';
 
-if (!page) {
-    const galleryHome = document.getElementById('partenaires');
+$( document ).ready(function() {
+    //IN-VIEW
+    if (document.querySelector( '.from-left' )) {
+        document.querySelector( '.from-left' ).classList.add( 'invisible' );
+    }
+    if (document.querySelector( '.from-right' )) {
+        document.querySelector( '.from-right' ).classList.add( 'invisible' );
+    }
+    if (document.querySelector( '.from-top' )) {
+        document.querySelector( '.from-top' ).classList.add( 'invisible' );
+    }
+    if (document.querySelector( '.from-bottom' )) {
+        document.querySelector( '.from-bottom' ).classList.add( 'invisible' );
+    }
+  
+    function makeMagic(data, direction) {
+      data.classList.remove("invisible");
+      data.classList.add(direction);
+    }
 
-    const options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.5 // Déclencher l'animation lorsque 50% de la div est visible
-    };
+    function removeMagic(data,direction){
+      data.classList.add('invisible');
+      data.classList.add(direction);
+    }
+  
+    inView.offset(150);
+  
+    inView('.from-left').on('enter', el => {
+      makeMagic(el, "fade-in-left");
+    });
+  
+    inView('.from-right').on('enter', el => {
+      makeMagic(el, "fade-in-right");
+    });
+  
+    inView('.from-bottom').on('enter', el => {
+      makeMagic(el, "fade-in-bottom");
+    });
     
-    const observer = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const items = entry.target.querySelectorAll('.logo_partenaires');
-    
-                items.forEach(item => {
-                    item.classList.add('slide-from-bottom-to-top');
-                });
-                observer.unobserve(entry.target); // Arrête l'observation une fois que la div est visible
-            }
-        });
-    }, options);
-    
-    observer.observe(galleryHome);
-} else {
-    console.log('L\'élément #content-page-contact n\'est pas présent sur cette page.');
-}
+    inView('.from-top').on('enter', el => {
+      makeMagic(el, "fade-in-top");
+    });
+
+});

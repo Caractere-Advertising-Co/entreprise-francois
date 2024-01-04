@@ -4,9 +4,8 @@
             $contact_title = get_field('titre-contact','options');
             $contact_txt = get_field('texte_contact','options');
         ?>
-        <?php echo $contact_title;?>
-        <?php echo $contact_txt;?>
+        <span class="from-top"><?php echo $contact_title;?><?php echo $contact_txt;?></span>
 
-        <a class="cta" href="">Contact</a>
+        <a class="cta from-bottom" href="">Contact</a>
     </div>
 </section>

@@ -14,7 +14,7 @@
                     ?>
 
                     <div class="swiper-slide" <?php echo !empty($bgSlide) ? ' style="background:url(\''.$bgSlide['url'].'\') no-repeat;background-size:cover;"' : '';?>>
-                        <div class="content">
+                        <div class="conten from-top">
                             <?php echo get_sub_field('titre');?>
                             <?php echo get_sub_field('baseline');?>
                             
@@ -33,14 +33,14 @@
 </section>
 
 <section id="about-us">
-    <div class="divider divider-top"></div>
+    <!--<div class="divider divider-top"></div>-->
 
     <div class="container">
-        <div class="col-g">
+        <div class="col-g from-right">
             <?php the_field('accroche');?>
         </div>
         
-        <div class="col-d">
+        <div class="col-d from-left">
             <?php $btn = get_field('liens_about');?>
             <?php the_field('description_presentation');?>
             <a class="cta" href="<?php echo $btn['url'];?>" ;?><span><?php echo $btn['title'];?></span></a>
@@ -57,7 +57,7 @@
     <div class="container">
         <?php $title = get_field('titre_reference');?>
 
-        <?php echo $title;?>
+       <span class="from-bottom"><?php echo $title;?></span>
 
         <table>
             <tbody>
@@ -67,7 +67,7 @@
                 ));
                     if(have_posts()):
                         while(have_posts()): the_post();?>
-                        <tr class="see-details-fp" style="cursor:pointer;" data-index="<?php echo get_the_id();?>" >
+                        <tr class="see-details-fp from-bottom" style="cursor:pointer;" data-index="<?php echo get_the_id();?>" >
                             <td class="thumbnail" style="background:url('<?php echo get_the_post_thumbnail_url();?>');"></td>
                             <td class="descr_ref">
                                 <span class="date"><?php echo get_the_date( 'd.m.Y' ); ?></span>
