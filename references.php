@@ -42,7 +42,7 @@ $bouton = get_field('bouton');
                     'orderby' => 'date',
                     'paged' => 1,
                 ));
-                
+
                 if ($chantiers->have_posts()):
                     while ($chantiers->have_posts()): $chantiers->the_post(); ?>
                         <?php get_template_part('template-parts/card-chantier');?>
@@ -58,12 +58,12 @@ $bouton = get_field('bouton');
 
     <?php get_template_part('template-parts/section-contact');?>
 
-    <div class="container" id="section-presa">
-        <div class="title_content">
+    <div class="container from-bottom" id="section-presa">
+        <div class="title_content from-top">
             <?php echo $titre_presa;?>
         </div>
 
-        <div class="col_intro">
+        <div class="col_intro from-right">
             <?php echo $descr;?>
 
             <a href="<?php echo $bouton['url'];?>" class="cta"><span><?php echo $bouton['title'];?></span></a>

@@ -29,13 +29,13 @@
         <div class="swiper-pagination"></div>
     </div>
 
-    <div class="divider"></div>
+    <div class="divider divider-hero"></div>
 </section>
 
 <section id="about-us">
-    <!--<div class="divider divider-top"></div>-->
-
     <div class="container">
+        <div class="divider divider-top"></div>
+
         <div class="col-g from-right">
             <?php the_field('accroche');?>
         </div>
@@ -55,6 +55,7 @@
 
 <section id="references">
     <div class="container">
+
         <?php $title = get_field('titre_reference');?>
 
        <span class="from-bottom"><?php echo $title;?></span>

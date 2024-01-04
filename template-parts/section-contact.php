@@ -6,6 +6,6 @@
         ?>
         <span class="from-top"><?php echo $contact_title;?><?php echo $contact_txt;?></span>
 
-        <a class="cta from-bottom" href="">Contact</a>
+        <a class="cta from-bottom" href="<?php echo get_bloginfo('url').'/contact';?>"><span>Contact</span></a>
     </div>
 </section>

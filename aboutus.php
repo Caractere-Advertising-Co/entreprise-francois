@@ -33,14 +33,14 @@ $galerie = get_field('galerie');
 <section id="about-lef">
     <div class="container">
         <div class="title_content">
-            <div>
+            <div class="from-right">
                 <?php echo $title;?>
             </div>
         </div>
 
-        <div class="col_intro">
+        <div class="col_intro from-left">
             <?php echo $intro;?>
-            <a href="<?php echo $btn_intro['url'];?>" class="cta cta-white"><span><?php echo $btn_intro['title'];?></span></a>
+            <a href="<?php echo $btn_intro['url'];?>" class="cta cta-white from-bottom"><span><?php echo $btn_intro['title'];?></span></a>
         </div>
     </div>
 </section>
@@ -48,7 +48,7 @@ $galerie = get_field('galerie');
 
 <section id="services">
     <div class="container">
-        <div class="swiper">
+        <div class="swiper from-bottom">
             <div class="swiper-wrapper" style="overflow:hidden;">
                 <?php 
                     foreach($galerie as $img):?>
@@ -65,14 +65,14 @@ $galerie = get_field('galerie');
 
         <div class="title_content">
             <div>
-                <h3><?php echo $subtitle;?></h3>
-                <?php echo $title_service;?>
+                <h3 class="from-left"><?php echo $subtitle;?></h3>
+                <span class="from-left"><?php echo $title_service;?></span>
             </div>
         </div>
 
         
         <div id="col_services">
-            <div id="exp_service">
+            <div id="exp_service" class="from-bottom">
                 <?php echo $exp_service;?>
             </div>
         
@@ -84,7 +84,7 @@ $galerie = get_field('galerie');
                         $ref =  substr(strtolower(get_sub_field('nom_service')),0,5);
                         $id = str_replace($carspec,'e',$ref).'_id';
                     ?>
-                        <div id="<?php echo $id;?>">
+                        <div id="<?php echo $id;?>" class="from-bottom" >
                             <button class="accordion"><?php echo get_sub_field('nom_service');?></button>
                             <div class="content_toggle">
                                 <?php echo get_sub_field('explications-service');?>
@@ -96,16 +96,16 @@ $galerie = get_field('galerie');
         </div>
 
         <?php if($btn_service) : ?>
-            <a class="cta" href="<?php echo $btn_service['url'];?>"><span><?php echo $btn_service['title'];?></span></a>
+            <a class="cta from-bottom" href="<?php echo $btn_service['url'];?>"><span><?php echo $btn_service['title'];?></span></a>
         <?php endif;?>
     </div>
 </section>
 
-<section id="advantages">
+<section id="advantages" class="from-bottom">
     <div class="container">
-        <?php echo $titreAdv;?>
+        <span class="from-bottom"><?php echo $titreAdv;?></span>
 
-        <div class="swiper swiper-avantages">
+        <div class="swiper swiper-avantages from-bottom">
             <div class="swiper-wrapper">
                 <?php if(have_rows('carte_avantages')) : 
                     while(have_rows('carte_avantages')) : the_row();?>
@@ -133,9 +133,9 @@ $galerie = get_field('galerie');
     </div>
 </section>
 <section id="contact">
-    <div class="container">
+    <div class="container from-bottom">
                 
-    <div class="content-title">
+    <div class="content-title from-top">
         <h4><?php echo $subTitleCtt;?></h4>
         <?php echo $titleCtt;?>
 

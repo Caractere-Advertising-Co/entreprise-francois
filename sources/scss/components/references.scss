@@ -2,7 +2,7 @@
     margin-bottom: 200px!important;
 
     .section_titre{
-        padding-left: 5vw;
+        padding-left: 10vw;
 
         h1{
             font-size: 2.5rem;
@@ -56,8 +56,6 @@
         }
     }
 
-    
-
     .grid-chantier{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -66,7 +64,7 @@
         margin-bottom: 80px;
         position: relative;
         width: 95vw;
-        left: -7.5vw;
+        left: -2.5vw;
 
         a{
             background-size: cover!important;
@@ -125,6 +123,7 @@
 #section-presa{
     border-top: 1px  solid #eee;
     padding: 10vh 0;
+    width: 80vw;
 
     h2{
         color:$primary-color;
