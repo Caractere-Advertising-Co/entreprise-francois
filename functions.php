@@ -164,6 +164,8 @@ function content_popup(){
             </div>
             
             <div class="col-slider">
+            <div class="close">X</div>
+
               <?php if($post_data['galerie']) : ?>
                 <div class="swiper swiper-reference">
                   <div class="swiper-wrapper">

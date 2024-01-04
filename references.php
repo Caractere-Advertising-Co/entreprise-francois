@@ -25,11 +25,13 @@ $bouton = get_field('bouton');
                         'order' => 'asc',
                         'hide-empty' => false,
                     ));
-
+                        
+                    echo '<div class="filter active" data-filter="all"> Voir tout</div>';
+                    
                     foreach ($terms as $term) :
                         echo '<div class="filter" data-filter="'. $term->name .'">'. $term->name .'</div>';
                     endforeach; 
-                        echo '<div class="filter" data-filter="all"> Voir tout</div>';
+                        
                 ?>
             </div>
         </div>

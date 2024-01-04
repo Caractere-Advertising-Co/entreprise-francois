@@ -124,7 +124,7 @@ body{
         h1{
           color:$primary-color;
           font-weight: 200;
-          font-size: 2.5em;
+          font-size: 3em;
           text-transform: uppercase;
   
             strong{
@@ -134,7 +134,7 @@ body{
   
         p{
           color:$secondary-color;
-          font-size: 1em;
+          font-size: 1.5em;
           text-transform: uppercase;
           font-weight: 400;
           letter-spacing: 1px;
@@ -175,12 +175,19 @@ body{
         }
 
       .divider-hero{
-        left:calc(55vw - 3px);
+        left:calc(50vw - 3px);
+        top:55vh;
       }
     }
 
     #about-us{
-      padding-top: 15vh;
+
+      padding:0;
+
+      .divider-top{
+        top: -2vh;
+        margin-bottom: 15vh;
+      }
 
       .container{
         display:flex;
@@ -193,19 +200,19 @@ body{
           h2{
             color:$primary-color;
             font-weight: 400;
-          }
+          } 
 
           h3{
             font-weight: 400;
             color:$secondary-color;
           }
-
         }
 
         .col-d{
           padding-top: 10vh;
           padding-left: 30%;
-          width:50%;
+          width: 50%;
+          margin: auto;
 
           p{
             margin-bottom: 20px;
@@ -217,13 +224,20 @@ body{
       }
 
       .divider-bottom{
-        top: 22vh;
+        top: 7vh;
+        background-color: $secondary-color;
       }
     }
 
     #partenaires{
-      background-color: #f7f7f7;
+      background: #f6f6f6;
+      background: -moz-linear-gradient(180deg, #f6f6f6 0%, rgba(255,255,255,1) 100%);
+      background: -webkit-linear-gradient(180deg, #f6f6f6 0%, rgba(255,255,255,1) 100%);
+      background: linear-gradient(180deg, #f6f6f6 0%, rgba(255,255,255,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f6f6f6",endColorstr="#ffffff",GradientType=1);
 
+
+      
       .intro{
         text-transform: uppercase;
         letter-spacing: 10px;
@@ -259,14 +273,16 @@ body{
         align-items: center;
         justify-content: center;
         width: 60%;
+        padding-bottom: 100px;
+        border-bottom: 1px solid #ccc;
       
         img{
-          filter:grayscale(1);
-          max-width: 100px;
+          filter:grayscale(1) opacity(.2);
+          max-width: 120px;
         
           &:hover{
             filter:none;
-            transition: all ease-in-out 300ms;
+            transition: all ease-in-out 600ms;
           }
         }
       }
@@ -277,6 +293,7 @@ body{
 
       .container{
         padding-bottom: 100px;
+        width: 70vw;
         border-bottom: 1px solid #eee;
       }
 
@@ -326,12 +343,13 @@ body{
               font-weight: 700;
               margin: 10px auto 20px;
               text-align: left;
+              font-size: 1.5rem;
             }
   
             p{
               font-size: .8em;
               line-height: 1.5em;
-              text-align: left;
+              text-align: justify;
             }
             
             a{

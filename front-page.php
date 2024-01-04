@@ -33,9 +33,9 @@
 </section>
 
 <section id="about-us">
-    <div class="container">
-        <div class="divider divider-top"></div>
 
+    <div class="divider divider-top"></div>
+    <div class="container">
         <div class="col-g from-right">
             <?php the_field('accroche');?>
         </div>

@@ -3,6 +3,7 @@
         <h2><?php echo $post_data['title']; ?></h2>
         <p>Date du chantier : <?php echo $post_data['date']; ?></p>
         <p>Lieu : <?php echo $post_data['lieu']; ?></p>
+        <p>X</p>
         <div class="content"><?php echo $post_data['content']; ?></div>
     </div>
     <div class="swiper">
@@ -13,6 +14,7 @@
                 <?php endforeach;?>
             <?php endif;?>
         </div>
+        
     </div>
-    <p>X</p>
+    
 </div>
