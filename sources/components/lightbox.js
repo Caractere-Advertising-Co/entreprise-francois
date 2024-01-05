@@ -48,10 +48,14 @@ $(document).ready(function() {
     }
 
     $(document).on('click', function(event) {
-        if (!$(event.target).closest('.container_popup, .type-chantiers, .see-details-fp').length || (document.querySelector(".close"))){
-            $('.container_popup').empty();
-            $('#popup_reference').hide();
+        if (!$(event.target).closest('.container_popup, .type-chantiers, .see-details-fp').length || $(event.target).hasClass('close')) {
+            closePopup();
         }
     });
+    
+    function closePopup() {
+        $('.container_popup').empty();
+        $('#popup_reference').hide();
+    }    
 
 });

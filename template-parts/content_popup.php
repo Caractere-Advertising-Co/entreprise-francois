@@ -1,4 +1,4 @@
-<div class="popup-content">
+<div class="popup-content desktop">
     <div class="col_g">
         <h2><?php echo $post_data['title']; ?></h2>
         <p>Date du chantier : <?php echo $post_data['date']; ?></p>
@@ -14,7 +14,5 @@
                 <?php endforeach;?>
             <?php endif;?>
         </div>
-        
     </div>
-    
 </div>

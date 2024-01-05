@@ -37,10 +37,10 @@
                         <img class="logo" src="<?php echo  $logo['url'];?>" alt="<?php echo $logo['alt'];?>"/>
                     </a>
 
-                    <div id="open_menu">
+                    <div id="open_menu" class="open_the_Mmenu">
                         <p class="labelToggle active">Menu</p>
                         <p class="labelToggle">Fermer</p>
-                        <svg id="open_the_Mmenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#fff" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
+                        <svg id="open_the_Mmenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
                             <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
                                 <animate dur="0.2s" attributeName="d" values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze" begin="start.begin" />
                                 <animate dur="0.2s" attributeName="d" values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze" begin="reverse.begin" />
@@ -63,7 +63,7 @@
                         <img class="logo" src="<?php echo  $logo['url'];?>" alt="<?php echo $logo['alt'];?>"/>
                     </a>
 
-                    <div id="open_menu">
+                    <div id="open_menu" class="open_the_Mmenu">
                         <p class="labelToggle active">Menu</p>
                         <p class="labelToggle">Fermer</p>
                         <svg id="open_the_Mmenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#022964" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">

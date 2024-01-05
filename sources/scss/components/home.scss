@@ -9,6 +9,14 @@ body{
       font-family: 'Montserrat',sans-serif;
     }
 
+    .mobile{
+      display: none;
+    }
+
+    .desktop{
+      display: block;
+    }
+
     .container,
     .content{
       width: 90vw;
@@ -44,12 +52,14 @@ body{
           align-items: center;
           min-width: 140px;
           max-width: 150px;
+          cursor:pointer;
   
           .labelToggle{
             display: none;
             margin:auto;
             color:$primary-color;
             font-weight: 500;
+            width: 200px;
             text-transform: uppercase;
           }
   
@@ -61,6 +71,7 @@ body{
             border-left: 1px solid $secondary-color;
             margin-left: 20px;
             padding-left: 20px;
+            stroke : $primary-color;
           }
   
           img{
@@ -93,6 +104,16 @@ body{
             display:block;
           }
         }
+
+        .container{
+           #open_menu{
+            svg{
+              stroke:#fff;
+            }
+           }
+        }
+
+        
       }
 
     .hide{

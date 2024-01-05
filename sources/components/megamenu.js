@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const openMenu = document.querySelector('#open_the_Mmenu');
+    const openMenu = document.querySelector('.open_the_Mmenu');
     const megaMenu = document.querySelector('#megamenu');
 
     const logoWhite = document.querySelector('.logo-white');
