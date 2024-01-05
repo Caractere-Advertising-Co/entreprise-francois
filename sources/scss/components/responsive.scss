@@ -338,6 +338,30 @@ body{
         }
         
     }
+
+
+    //Megamenu
+    #megamenu{
+        .container{
+            .col-g{
+                #menu-principal{
+                    li{
+                        font-size: 2.5rem;
+                    }
+                }
+
+            }
+
+            .col-d{
+                position: relative;
+                bottom: 3vh;
+                
+                a+a{
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
 }
     
 }
