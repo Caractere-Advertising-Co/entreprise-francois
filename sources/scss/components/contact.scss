@@ -11,6 +11,7 @@
             font-size: 1em;
             margin : 100px 0 auto auto;
             padding-right: calc(10% + 24px);
+            text-align: justify;
 
             input,
             select,
@@ -25,7 +26,7 @@
                 color:#fff;
                 min-height: 40px;
                 font-family: 'Montserrat-v',sans-serif;
-                padding: 20px 10px;
+                padding: 20px 0;
                 margin-bottom: 30px;
 
                 &:focus,
