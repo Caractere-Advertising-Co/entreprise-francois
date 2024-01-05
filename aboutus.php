@@ -48,7 +48,7 @@ $galerie = get_field('galerie');
 
 <section id="services">
     <div class="container">
-        <div class="swiper from-bottom">
+        <div class="swiper swiper-aboutus from-bottom">
             <div class="swiper-wrapper" style="overflow:hidden;">
                 <?php 
                     foreach($galerie as $img):?>
@@ -59,8 +59,10 @@ $galerie = get_field('galerie');
                 ?>
             </div>
 
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev desktop"></div>
+            <div class="swiper-button-next desktop"></div>
+
+            <div class="swiper-pagination-2 mobile"></div>
         </div>
 
         <div class="title_content">

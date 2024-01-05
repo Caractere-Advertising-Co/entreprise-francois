@@ -376,9 +376,43 @@ body{
 }
 
 .page-template-aboutus{
+    #services{
+        .container{
+            .swiper-aboutus{
+                .swiper-wrapper{
+                    height: auto;
+                }
+            }
+        }
+    }
     #partenaires{
         .container{
             padding: 0;
+        }
+    }
+
+    #advantages{
+        .container{
+            .swiper{
+                .swiper-button-next-2,
+                .swiper-button-prev-2{
+                    height: 30px;
+                    width: 30px;
+                    top: calc( 50% - 15px);
+
+                    &::after{
+                        font-size: 1rem;
+                    }
+                }
+
+                .swiper-button-prev-2{
+                    left: -50px;
+                }
+
+                .swiper-button-next-2{
+                    right: -50px;
+                }
+            }
         }
     }
 }

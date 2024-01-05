@@ -1,6 +1,6 @@
 const swiper = new Swiper('.swiper', {
     loop: true,
-    autoplay: false,
+    autoplay: true,
     delay: 5000,
     speed: 1000,
     cssMode: true,
@@ -14,6 +14,21 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
+const swiper_abu = new Swiper('.swiper-aboutus', {
+  loop: true,
+  autoplay: true,
+  speed: 1000,
+  cssMode: true,
+
+  pagination: {
+      el: '.swiper-pagination-2',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
 const swiper_adv = new Swiper('.swiper-avantages', {
   loop: true,
   loopAddBlankSlides: false,
@@ -25,7 +40,7 @@ const swiper_adv = new Swiper('.swiper-avantages', {
     // when window width is >= 320px
     320: {
       slidesPerView: 1,
-      spaceBetween: 20
+      spaceBetween: 20,
     },
     // when window width is >= 480px
     480: {
