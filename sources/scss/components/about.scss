@@ -366,16 +366,39 @@ h4{
             text-align: left!important;
             margin-top: 20px;
             font-size: 1rem;
-            padding: 15px 10px;
+            padding: 15px 0;
             min-height: 30px;
             font-family: 'Montserrat-v',sans-serif;
             margin-bottom: 30px;
+            color:#aaa;
+
+            &::placeholder{
+                color: #aaa;
+            }
+
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover, 
+            &:-webkit-autofill:focus, 
+            &:-webkit-autofill:active{
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: $font-color;
+                transition: background-color 5000s ease-in-out 0s;
+            }
+
+            &:focus,
+                &:active,
+                &:focus-visible{
+                    background: none!important;
+                    border: none;
+                    outline: none!important;
+                    border-bottom: 1px solid $secondary-color;
+                }
         }
 
         label{
             display: block;
             text-align: left!important;
-        }   
+        }
 
         input[type="submit"]{
             color:$primary-color;
