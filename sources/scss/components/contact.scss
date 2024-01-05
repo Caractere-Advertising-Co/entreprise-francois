@@ -13,22 +13,35 @@
             padding-right: calc(10% + 24px);
 
             input,
-            select,
-            textarea{
-                width: 100%;
-                border:none;
-                border-bottom: 1px solid #eee;
-                font-weight: 400;
-                text-align: left!important;
-                margin-top: 20px;
-                background: none!important;
-                color:#fff;
-                min-height: 40px;
-                font-family: 'Montserrat-v',sans-serif;
-                padding: 20px 10px;
-                margin-bottom: 30px;
+        select,
+        textarea{
+            width: 100%;
+            border:none;
+            border-bottom: 1px solid #eee;
+            font-weight: 400;
+            text-align: left!important;
+            margin-top: 20px;
+            font-size: 1rem;
+            padding: 15px 0;
+            min-height: 30px;
+            font-family: 'Montserrat-v',sans-serif;
+            margin-bottom: 30px;
+            color:#aaa;
 
-                &:focus,
+            &::placeholder{
+                color: #aaa;
+            }
+
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover, 
+            &:-webkit-autofill:focus, 
+            &:-webkit-autofill:active{
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: $font-color;
+                transition: background-color 5000s ease-in-out 0s;
+            }
+
+            &:focus,
                 &:active,
                 &:focus-visible{
                     background: none!important;
@@ -36,21 +49,7 @@
                     outline: none!important;
                     border-bottom: 1px solid $secondary-color;
                 }
-
-                &::placeholder{
-                    color: #fff;
-                    font-family: 'Monsterrat',sans-serif!important;
-                }
-
-                &:-webkit-autofill,
-                &:-webkit-autofill:hover, 
-                &:-webkit-autofill:focus, 
-                &:-webkit-autofill:active{
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: #ffffff;
-                    transition: background-color 5000s ease-in-out 0s;
-                }
-            }
+        }
 
             label{
                 display: block;
