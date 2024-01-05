@@ -9,6 +9,10 @@ body{
         font-size: 1.8em!important;
     }
 
+    section{
+        padding: 5vh 0 30vh 0;
+    }
+
     p{
         font-size: .9em!important;
         line-height: 2em!important;
@@ -17,6 +21,7 @@ body{
         width: 80vw!important;
     }
 
+    //Megamenu
     #megamenu{
         .container{
             flex-direction: column;
@@ -24,11 +29,22 @@ body{
             padding-top: 25vh;
             height: 75vh;
 
-            
             .col-g{
                 width: 100%;
-                li{
-                    font-size: 1.5em;
+                #menu-principal{
+                    li{
+                        font-size: 2.5rem;
+                    }
+                }
+
+            }
+
+            .col-d{
+                position: relative;
+                bottom: 3vh;
+
+                a+a{
+                    margin-left: 10px;
                 }
             }
         }
@@ -132,6 +148,16 @@ body{
             }
         }
         
+    }
+
+    #partenaires{
+        .from-bottom{
+            opacity: 1;
+        }
+
+        .container{
+            padding: 0;
+        }
     }
 
     #references{
@@ -241,7 +267,7 @@ body{
     }
 
     //Page contact{
-        #content-page-contact{
+    #content-page-contact{
 
             padding-bottom: 0;
             .container{
@@ -257,7 +283,7 @@ body{
 
                 }
             }
-        }
+    }
 
     //footer
 
@@ -347,28 +373,12 @@ body{
         }
         
     }
+}
 
-
-    //Megamenu
-    #megamenu{
+.page-template-aboutus{
+    #partenaires{
         .container{
-            .col-g{
-                #menu-principal{
-                    li{
-                        font-size: 2.5rem;
-                    }
-                }
-
-            }
-
-            .col-d{
-                position: relative;
-                bottom: 3vh;
-
-                a+a{
-                    margin-left: 10px;
-                }
-            }
+            padding: 0;
         }
     }
 }
