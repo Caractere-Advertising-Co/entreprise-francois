@@ -1,5 +1,6 @@
 @media screen and (max-width:640px) {
     // Header
+
 body{
 
     h1,
@@ -60,15 +61,19 @@ body{
     }
 
     #about-lef{
-        .title_content{
-            h1,
-            h2{
-                font-size: 1.5em!important;
+        .container{
+            .title_content{
+                h1,
+                h2{
+                    font-size: 1.5em!important;
+                }
             }
-        }
+    
+            .col_intro{
+                width: 100%!important;
+                padding: 0;
+            }
 
-        .col_intro{
-            width: 100%!important;
         }
     }
 
@@ -152,8 +157,11 @@ body{
         
     }
 
-    #col_services{
-        width: 100%!important;
+    #services{
+        #col_services{
+            width: 100%!important;
+            padding: 0;
+        }
     }
 
     .mobile{
@@ -211,6 +219,7 @@ body{
             .col_intro{
                 margin: 50px auto;
                 width: 100%;
+                padding: 0;
             }
         }
     }
@@ -355,7 +364,7 @@ body{
             .col-d{
                 position: relative;
                 bottom: 3vh;
-                
+
                 a+a{
                     margin-left: 10px;
                 }
