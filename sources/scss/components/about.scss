@@ -55,6 +55,51 @@ h4{
             padding-right: calc(10% + 24px);
             text-align: justify;
         }
+
+        button{
+            width: 100%;
+            font-family: 'Montserrat-v',sans-serif;
+            font-size: 1.2rem;
+            background: none;
+            border: none;
+            text-align: left;
+            line-height: 90px;
+            letter-spacing: 2px;
+            height: 90px;
+            text-transform: uppercase;
+            font-weight: 400;
+            color:$secondary-color;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #eeeeee20;
+        
+            &::after{
+                content :'\f077';
+                font-family: 'Font Awesome';
+                position: relative;
+                right: 0;
+                left: auto;
+                text-align: right;
+            }
+        }
+        
+        .content_toggle{
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.2s ease-out;
+            
+        }
+        
+        .active{
+            &::after{
+                content :'\f078';
+                font-family: 'Font Awesome';
+                position: relative;
+                right: 0;
+                left: auto;
+                text-align: right;
+            }
+        }
     }
 }
 
@@ -138,47 +183,7 @@ h4{
         }
     }
 
-    button{
-        width: 100%;
-        background: none;
-        border: none;
-        text-align: left;
-        line-height: 70px;
-        height: 70px;
-        text-transform: uppercase;
-        font-weight: 600;
-        color:$secondary-color;
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid #eee;
-    
-        &::after{
-            content :'\f077';
-            font-family: 'Font Awesome';
-            position: relative;
-            right: 0;
-            left: auto;
-            text-align: right;
-        }
-    }
-    
-    .content_toggle{
-        max-height: 0;
-        overflow: hidden;
-        transition: all 0.2s ease-out;
-        
-    }
-    
-    .active{
-        &::after{
-            content :'\f078';
-            font-family: 'Font Awesome';
-            position: relative;
-            right: 0;
-            left: auto;
-            text-align: right;
-        }
-    }
+   
 
     .cta{
         text-align: center;

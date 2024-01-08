@@ -22,25 +22,16 @@
                 font-weight: 400;
                 text-align: left!important;
                 margin-top: 20px;
-                background: none!important;
-                color:#fff;
-                min-height: 40px;
+                font-size: 1rem;
+                padding: 15px 0;
+                min-height: 30px;
                 font-family: 'Montserrat-v',sans-serif;
-                padding: 20px 0;
                 margin-bottom: 30px;
-
-                &:focus,
-                &:active,
-                &:focus-visible{
-                    background: none!important;
-                    border: none;
-                    outline: none!important;
-                    border-bottom: 1px solid $secondary-color;
-                }
+                color:#aaa;
+                background:transparent;
 
                 &::placeholder{
-                    color: #fff;
-                    font-family: 'Monsterrat-v',sans-serif!important;
+                    color: #aaa;
                 }
 
                 &:-webkit-autofill,
@@ -48,9 +39,18 @@
                 &:-webkit-autofill:focus, 
                 &:-webkit-autofill:active{
                     -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
+                    -webkit-text-fill-color: $font-color;
                     transition: background-color 5000s ease-in-out 0s;
                 }
+
+                &:focus,
+                    &:active,
+                    &:focus-visible{
+                        background: none!important;
+                        border: none;
+                        outline: none!important;
+                        border-bottom: 1px solid $secondary-color;
+                    }
             }
 
             label{
