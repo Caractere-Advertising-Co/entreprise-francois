@@ -69,4 +69,10 @@ document.addEventListener('DOMContentLoaded', function() {
     menuItems.forEach(function(item) {
         item.addEventListener('mouseover', openSubMenu);
     });
+
+    const links = document.querySelector('a');
+
+    links.addEventListener('click', function(){
+        megaMenu.classList.toggle('is_open');
+    })
 });
