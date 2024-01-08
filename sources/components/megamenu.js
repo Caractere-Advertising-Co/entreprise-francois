@@ -70,9 +70,13 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('mouseover', openSubMenu);
     });
 
-    const links = document.querySelectorAll('.menu a');
+    const megaMenulinks = document.querySelectorAll('.menu a');
 
-    links.on('click', function(){
-        megaMenu.classList.remove('is_open');
-    })
+    megaMenulinks.forEach(function(item){
+        item.addEventListener('click', function(){
+            megaMenu.classList.toggle('is_open');
+            alert('hello');
+        });
+    });
+    
 });
