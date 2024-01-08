@@ -75,6 +75,15 @@ document.addEventListener('DOMContentLoaded', function() {
     megaMenulinks.forEach(function(item){
         item.addEventListener('click', function(){
             megaMenu.classList.toggle('is_open');
+
+            if(header){
+                header.classList.toggle('is_fixed');
+                header.classList.toggle('dark-theme');  
+            }
+            
+            if(logoWhite){
+                logoWhite.classList.toggle('hide');
+            }
             //alert('hello');
         });
     });
