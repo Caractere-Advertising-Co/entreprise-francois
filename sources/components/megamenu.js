@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('mouseover', openSubMenu);
     });
 
-    const links = document.querySelector('.menu a');
+    const links = document.querySelectorAll('.menu a');
 
-    links.addEventListener('click', function(){
-        megaMenu.classList.toggle('is_open');
+    links.on('click', function(){
+        megaMenu.classList.remove('is_open');
     })
 });
