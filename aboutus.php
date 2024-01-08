@@ -41,24 +41,26 @@ $galerie = get_field('galerie');
         <div class="col_intro from-left">
             <?php echo $intro;?>
 
-            <?php 
-                if(have_rows('services')):
-                    while(have_rows('services')): the_row(); ?>
-                    <?php
-                        $carspec = array('é','è','à','ç');
-                        $ref =  substr(strtolower(get_sub_field('nom_service')),0,5);
-                        $id = str_replace($carspec,'e',$ref).'_id';
-                    ?>
-                        <div id="<?php echo $id;?>" class="from-bottom" >
-                            <button class="accordion"><?php echo get_sub_field('nom_service');?></button>
-                            <div class="content_toggle">
-                                <?php echo get_sub_field('explications-service');?>
+            <div id="tabl_services">
+                <?php 
+                    if(have_rows('services')):
+                        while(have_rows('services')): the_row(); ?>
+                        <?php
+                            $carspec = array('é','è','à','ç');
+                            $ref =  substr(strtolower(get_sub_field('nom_service')),0,5);
+                            $id = str_replace($carspec,'e',$ref).'_id';
+                        ?>
+                            <div id="<?php echo $id;?>" class="from-bottom" >
+                                <button class="accordion"><?php echo get_sub_field('nom_service');?></button>
+                                <div class="content_toggle">
+                                    <?php echo get_sub_field('explications-service');?>
+                                </div>
                             </div>
-                        </div>
-                    <?php endwhile;
-                endif;
-            ?>
-            
+                        <?php endwhile;
+                    endif;
+                ?>
+            </div>
+
             <a href="<?php echo $btn_intro['url'];?>" class="cta cta-white from-bottom"><span><?php echo $btn_intro['title'];?></span></a>
         </div>
     </div>
