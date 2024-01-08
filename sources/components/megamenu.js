@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     megaMenulinks.forEach(function(item){
         item.addEventListener('click', function(){
             megaMenu.classList.toggle('is_open');
-            alert('hello');
+            //alert('hello');
         });
     });
     
