@@ -18,7 +18,7 @@ $bouton = get_field('bouton');
     <div class="container section-galerie">
         <div class="section_titre">
             <?php echo get_field('titre');?>
-            <div class="section_filter">
+            <!--<div class="section_filter">
                 <?php 
                     $terms = get_terms('type-chantier', array(
                         'orderby' => 'name',
@@ -33,7 +33,7 @@ $bouton = get_field('bouton');
                     endforeach; 
                         
                 ?>
-            </div>
+            </div>-->
         </div>
 
         <div class="grid-chantier">
