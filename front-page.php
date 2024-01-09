@@ -95,7 +95,8 @@
                 ?>
             </tbody>
         </table>
-        <a class="cta" href=""><span>voir plus</span></a>
+        <?php $btn_ref = get_field('texte_bouton_ref');?>
+        <a class="cta" href="<?php echo $btn_ref['url'];?>"><span>voir plus</span></a>
     </div>
 </section>
 
