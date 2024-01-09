@@ -1,8 +1,10 @@
 <?php $taxs = get_the_terms(get_the_id(),'type-chantier');
-                    
-foreach($taxs as $tax):
-    $value = $tax->name;
-endforeach;?>
+    
+if($taxs): 
+    foreach($taxs as $tax):
+        $value = $tax->name;
+    endforeach
+endif;?>
 
 <a data-filters="<?php echo $value;?>" data-index="<?php echo get_the_id();?>" href="<?php echo get_the_post_thumbnail_url();?>" style="background:url('<?php echo get_the_post_thumbnail_url();?>');" <?php post_class('from-bottom') ;?>>
     <article class="thumbnail">
