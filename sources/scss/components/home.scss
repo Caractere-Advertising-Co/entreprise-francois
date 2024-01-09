@@ -125,24 +125,22 @@ body{
     }
 
     #hero-section{
+      position: absolute;
       width: 100vw;
       font-family: 'Montserrat-v',sans-serif;
-      // height: calc(100vh - 150px);
-      // padding: 0;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      padding: 0!important;
 
       .swiper{
-        position: absolute;
         width: 100vw;
-        top: 0;
-        left: 0;
-        z-index: 0;
         padding: 0;
       }
 
       .swiper-slide{
         padding-top: 45vh;
-        padding-bottom: 5vh;
-        height:50vh;
+        height: 55vh;
         padding-left: 10vw;
         
 
@@ -199,18 +197,20 @@ body{
           width: 60px;
         }
 
-      .divider-hero{
-        left:calc(50vw - 3px);
-        top:55vh;
-      }
+      
     }
 
     #about-us{
-
       padding:0;
+      margin-top: calc(100vh - 200px);
+
+      .divider-hero{
+        left:calc(50vw - 3px);
+        top:-30px;
+      }
 
       .divider-top{
-        top: -2vh;
+        top: -10px;
         margin-bottom: 15vh;
       }
 

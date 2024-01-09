@@ -29,10 +29,10 @@
         <div class="swiper-pagination"></div>
     </div>
 
-    <div class="divider divider-hero"></div>
 </section>
 
 <section id="about-us">
+    <div class="divider divider-hero"></div>
 
     <div class="divider divider-top"></div>
     <div class="container">
