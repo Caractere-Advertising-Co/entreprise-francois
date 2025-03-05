@@ -164,17 +164,19 @@ function content_popup(){
                 <div class="swiper swiper-reference">
                   <div class="swiper-wrapper">
                     <?php foreach($post_data['galerie'] as $img) :?>
-                      <div class="swiper-slide" style="background:url('<?php echo $img['url'];?>');">
+                      <div class="swiper-slide">
+                        <img src="<?php echo $img['url'];?>" alt=""/>
                       </div>
                     <?php endforeach;?>
                   </div>
 
                   <div class="swiper-button-next"></div>
                   <div class="swiper-button-prev"></div>  
-                </div>
+                </div>x@
                   
               <?php else :?>
-                <div class="full-size" style="background:url('<?php echo $post_data['thumbnails'];?>');">
+                <div class="full-size">
+                  <img src="'<?php echo $post_data['thumbnails'];?>"/>
                 </div>
               <?php endif;?>
             </div>
