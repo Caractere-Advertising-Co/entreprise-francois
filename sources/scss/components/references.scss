@@ -205,7 +205,7 @@ section{
                     width: 50px;
                     aspect-ratio: 1;
                     position: absolute;
-                    bottom: 0;
+                    bottom: calc(50% - 25px);
                     top:auto;
                     left:auto;
                     right: 1px;
@@ -217,7 +217,8 @@ section{
                 }
 
                 .swiper-button-prev{
-                    right: 51px;
+                    left: 0;
+                    right: auto;
                     border-right: 1px solid #eee;
                 }
 
