@@ -21,8 +21,7 @@
                 <?php echo get_field('information_de_contact','options');?>
             </div>
         </div>
-
-        <div class="footer-bottom from-bottom">
+65%
             <?php echo get_field('credentials','options');?>           
         </div>
     </div>
