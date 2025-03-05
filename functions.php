@@ -156,12 +156,6 @@ function content_popup(){
           ?>
           
           <div class="popup-content">
-            <div class="col_details">
-              <h2><?php echo $post_data['title']; ?></h2>
-              <p>Date du chantier : <?php echo $post_data['date']; ?></p>
-              <p>Lieu : <?php echo $post_data['lieu']; ?></p>
-              <?php echo $post_data['content']; ?>
-            </div>
             
             <div class="col-slider">
             <div class="close">X</div>
@@ -178,15 +172,6 @@ function content_popup(){
                   <div class="swiper-button-next"></div>
                   <div class="swiper-button-prev"></div>  
                 </div>
-
-                <!-- <div thumbsSlider="" class="swiper swiper-thumbs">
-                  <div class="swiper-wrapper">
-                    <?php foreach($post_data['galerie'] as $img) : ?>
-                      <div class="swiper-slide" style="background:url('<?php echo $img['url'];?>');background-size:cover;">
-                      </div>
-                    <?php endforeach;?>
-                  </div>
-                </div> -->
                   
               <?php else :?>
                 <div class="full-size" style="background:url('<?php echo $post_data['thumbnails'];?>');">

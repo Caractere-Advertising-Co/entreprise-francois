@@ -36,9 +36,6 @@ $(document).ready(function() {
                             nextEl: ".swiper-button-next",
                             prevEl: ".swiper-button-prev",
                         },
-                        // thumbs: {
-                        //     swiper: swiper_thumbs,
-                        // },
                     });
                 } else {
                     console.log('La réponse est vide ou nulle.');
