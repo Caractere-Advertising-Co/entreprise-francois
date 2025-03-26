@@ -58,43 +58,27 @@
 
         <?php $title = get_field('titre_reference');?>
 
-       <span class="from-bottom"><?php echo $title;?></span>
+        <span class="from-bottom"><?php echo $title;?></span>
 
-        <table>
-            <tbody>
-                <?php query_posts( array(
+        <div class="grid-chantier">
+            <?php 
+                $chantiers = new WP_Query(array(
                     'post_type' => 'chantiers',
-                    'posts_per_page' => '3',
+                    'posts_per_page' => 3,
+                    'orderby' => 'date',
+                    'paged' => 1,
                 ));
-                    if(have_posts()):
-                        while(have_posts()): the_post();?>
-                        <tr class="see-details-fp from-bottom desktop" style="cursor:pointer;" data-index="<?php echo get_the_id();?>" >
-                            <td class="thumbnail" style="background:url('<?php echo get_the_post_thumbnail_url();?>');"></td>
-                            <td class="descr_ref">
-                                <span class="date"><?php echo get_the_date( 'd.m.Y' ); ?></span>
-                                <h3><?php the_title();?></h3>
-                                <?php the_content();?>
-                                <a href="#!">Lire plus...</a>
-                            </td>
-                        </tr>
-                        <tr class="see-details-fp from-bottom mobile" style="cursor:pointer;" data-index="<?php echo get_the_id();?>" >
-                            <td class="content_slide">
-                                <div class="thumbnail" style="background:url('<?php echo get_the_post_thumbnail_url();?>');"></div>
-                                <div class="descr_ref">
-                                    <span class="date"><?php echo get_the_date( 'd.m.Y' ); ?></span>
-                                    <h3><?php the_title();?></h3>
-                                    <?php the_content();?>
-                                    <a href="#!">Lire plus...</a>
-                                </div>
-                            </td>
-                        </tr>                
-                        <?php endwhile;
-                    endif;
 
-                    wp_reset_query();
-                ?>
-            </tbody>
-        </table>
+                if ($chantiers->have_posts()):
+                    while ($chantiers->have_posts()): $chantiers->the_post(); ?>
+                        <?php get_template_part('template-parts/card-chantier');?>
+                    <?php endwhile;
+                endif;
+                
+                wp_reset_postdata();
+            ?>
+        </div>
+
         <?php $btn_ref = get_field('texte_bouton_ref');?>
         <a class="cta" href="<?php echo $btn_ref['url'];?>"><span>voir plus</span></a>
     </div>

@@ -116,8 +116,6 @@ body{
             }
            }
         }
-
-        
       }
 
     .hide{
@@ -334,61 +332,57 @@ body{
         font-weight: 600;
       }
 
-      table{
-        width: 80%;
-        margin:100px auto;
-        border-collapse: collapse;
-        
-        tr{
-          border-top: 1px solid #eee;
-
+      .grid-chantier{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        margin: 50px 0;
+        margin-bottom: 80px;
+        position: relative;
+        width: 100%;
+  
+        a{
+          background-size: cover!important;
+          background-position: center center!important;
+          text-decoration: none;
+  
           .thumbnail{
-            width: 30%;
-            min-width: 30%;
-            height: 250px;
-            background-size: cover!important;
-            background-position: center;
-          }
+            width: 100%;
+            min-height: 350px;
+            transition: all ease-in-out 200ms;
+            background-size:cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
   
-          .descr_ref{
-            padding: 20px 50px;
-  
-            .date{
-              color:$secondary-color;
-              text-align: left;
-              display: block;
-              font-family: 'Montserrat-v',sans-serif;
-              font-weight: 600;
-              letter-spacing: 3px;
-              font-size: .8em;
-            }
-  
-            h3{
-              color:$primary-color;
-              font-weight: 700;
-              margin: 10px auto 20px;
-              text-align: left;
-              font-size: 1.5rem;
-            }
-  
+            h3,
             p{
-              font-size: .8em;
-              line-height: 1.5em;
-              text-align: justify;
+              transition: all ease-in-out 300ms;
+              color: #fff;
+              margin: 0;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              font-size: .7em;
+              opacity: 0;
             }
-            
-            a{
-              margin:5px auto;
-              text-align: left;
-              font-size: .8em;
-              font-style: italic;
-              text-decoration: none;
-              display: block;
-              color:#222;
-              font-family: 'Montserrat-v',sans-serif;
+              
+            h3{
+              font-weight: 600;  
             }
           }
-        }        
+  
+          &:hover{
+            .thumbnail{
+              backdrop-filter: brightness(50%);
+            }
+            h3,
+            p{
+              opacity: 1;
+            }
+          }
+        }
       }
 
       .cta{
@@ -429,4 +423,6 @@ body{
 
      
     }
+
+    
 }
