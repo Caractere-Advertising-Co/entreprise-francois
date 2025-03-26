@@ -28,9 +28,21 @@
     </div>
     <div class="disclaimer">
         <div class="container">
-            <a href="">Cookies</a>
+            <?php 
+                $cookies = get_field('cookies','options');
+
+                if($cookies):
+                    echo '<a href="'.$cookies['url'].'">'.$cookies['name'].'</a>';
+                endif;
+            ?>
             <p><?php echo get_field('copyright','options');?></p>
-            <a href="">Confidentialité</a>
+            <?php 
+                $conf = get_field('confidentialite','options');
+
+                if($conf):
+                    echo '<a href="'.$conf['url'].'">'.$conf['name'].'</a>';
+                endif;
+            ?>
         </div>
     </div>
     
