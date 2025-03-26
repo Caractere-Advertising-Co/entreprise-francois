@@ -32,7 +32,7 @@
                 $cookies = get_field('cookies','options');
 
                 if($cookies):
-                    echo '<a href="'.$cookies['url'].'">'.$cookies['name'].'</a>';
+                    echo '<a href="'.$cookies['url'].'">'.$cookies['title'].'</a>';
                 endif;
             ?>
             <p><?php echo get_field('copyright','options');?></p>
@@ -40,7 +40,7 @@
                 $conf = get_field('confidentialite','options');
 
                 if($conf):
-                    echo '<a href="'.$conf['url'].'">'.$conf['name'].'</a>';
+                    echo '<a href="'.$conf['url'].'">'.$conf['title'].'</a>';
                 endif;
             ?>
         </div>
