@@ -35,6 +35,7 @@
                     echo '<a href="'.$cookies['url'].'">'.$cookies['title'].'</a>';
                 endif;
             ?>
+            
             <p><?php echo get_field('copyright','options');?></p>
             <?php 
                 $conf = get_field('confidentialite','options');
