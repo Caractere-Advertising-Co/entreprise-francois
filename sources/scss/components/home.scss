@@ -237,10 +237,17 @@ body{
           width: 50%;
           margin: auto;
 
+          h3{
+            color:$primary-color;
+            line-height: 2rem;
+            text-align: justify;
+            font-size: 1rem;
+          }
+
           p{
             margin-bottom: 20px;
             color:$primary-color;
-            line-height: 2em;
+            line-height: 2rem;
             text-align: justify;
           }
         }
@@ -323,11 +330,11 @@ body{
       h2{
         font-weight: 400;
         color:$primary-color;
-        font-size: 2em;
+        font-size: 2rem;
       }
 
       h3{
-        font-size: 2em;
+        font-size: 2rem;
         color:$secondary-color;
         font-weight: 600;
       }
