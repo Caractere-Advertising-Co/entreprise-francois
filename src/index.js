@@ -1,4 +1,3 @@
-import "./scss/style.scss";
 import "./components/swiper.js";
 import "./components/scroll-to-top.js";
 import "./components/animate.js";
