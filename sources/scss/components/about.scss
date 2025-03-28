@@ -1,6 +1,6 @@
 p{
     font-weight: 200;
-    line-height: 2em;
+    line-height: 1.5rem;
     margin-bottom: 20px;
 }
 
@@ -87,6 +87,12 @@ h4{
             max-height: 0;
             overflow: hidden;
             transition: all 0.2s ease-out;
+
+            h3{
+                font-size: 1rem;
+                line-height: 1.5rem;
+                font-weight: 800;
+            }
             
         }
         
