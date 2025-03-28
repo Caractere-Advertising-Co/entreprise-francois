@@ -1,6 +1,6 @@
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.swiper-home', {
     loop: true,
-    autoplay: false,
+    autoplay: true,
     delay: 5000,
     speed: 1000,
     cssMode: true,

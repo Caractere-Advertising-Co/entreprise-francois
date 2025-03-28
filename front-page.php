@@ -3,7 +3,7 @@
 <?php get_template_part( 'template-parts/popup-reference' );?>
 
 <section id="hero-section">
-    <div class="swiper">
+    <div class="swiper swiper-home">
         <div class="swiper-wrapper">
 
             <?php if(have_rows('slide')):
