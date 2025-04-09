@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const openMenu = document.querySelector('.open_the_Mmenu');
     const megaMenu = document.querySelector('#megamenu');
 
+    const body = document.body;
+
     const logoWhite = document.querySelector('.logo-white');
 
     const header = document.querySelector('#header.dark-theme');
@@ -9,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     openMenu.addEventListener('click', function(e){
         megaMenu.classList.toggle('is_open');
+        body.classList.toggle('is_fixed');
 
         if(header){
             header.classList.toggle('is_fixed');
