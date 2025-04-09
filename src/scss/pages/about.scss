@@ -135,6 +135,7 @@ h4{
             img{
                 max-width: 80%!important;
                 margin:auto;
+                object-fit: contain;
             }
         
         }
@@ -200,7 +201,6 @@ h4{
     }
 
 }
-
 
 #advantages{
     background-color: $primary-color;
